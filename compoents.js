@@ -8,7 +8,7 @@ const getnavbar=()=>{
     <h3><a href="dayreci.html">|Receipe Of The Day! |</a></h3>
     <h3><a href="randomrecip.html">|Best Recipie/Random Recipie |</a></h3>
     <h3><a href="login.html">Login</a></h3>
-    <h3><a href="Signup.html">Signup</a></h3>
+    <h3><a href="signup.html">Signup</a></h3>
 </div> </div> `;
 }
 
