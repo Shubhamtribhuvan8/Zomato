@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="icon" type="image/x-icon" href="  https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png">
+    <style>
+           @media only screen and (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+
+    body {
+      background-color: white;
+    }
+       #navbar {
+            font-size: larger;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom-style: solid;
+        }
+
+        .options {
+            display: flex;
+            gap: 51px;
+            align-items: center;
+        }
+        #password,button {
+            width: 95%;
+    font-weight: bold;
+    FONT-SIZE: medium;
+    padding: 9px;
+    box-sizing: border-box;
+}
+button{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 95%;
+    padding: 9px;
+    FONT-WEIGHT: BOLD;
+    FONT-SIZE: medium;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #2b619e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+form {
+  margin: 0 auto;
+  width: 30%;
+  background-color: darkkhaki;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 30px;
+}
+input[type="submit"]:hover {
+  background-color: #3973b6;
+}
+h1{
+  text-align: center;
+  color: rgb(195, 131, 12);
+}
+    </style>
+</head>
+    <body>
+    <div id="nav">
+    </div>
+    <h1>Signup page</h1>
+    <form id="signup-form">
+        <!-- <label for="name">Name:</label><br> -->
+        <input type="text" id="name" name="name" placeholder="Name"><br>
+        <!-- <label for="email">Email:</label><br> -->
+        <input type="text" id="email" name="email"placeholder="Email"><br>
+        <!-- <label for="password">Password:</label><br> -->
+        <input type="password" id="password" name="password" placeholder="Password"><br><br>
+        <button type="button" id="btn">Sign Up</button>
+      </form>
+</body>
+</html>
+<script type="module">
+  import { getnavbar } from "./compoents.js";
+    // get navbar
+    let navconainer = document.getElementById("nav");
+    navconainer.innerHTML = getnavbar();
+   
+    function signup() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('password', password);
+      if(name=="" ||email=="" ||password==""){
+        alert("fill the form");
+      }
+      else{
+        alert("Signup SuucessFully!")
+        window.location.href="login.html"
+      }
+    }
+    document.getElementById("btn").addEventListener("click",signup);
+
+
+</script>
+
+
