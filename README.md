@@ -1,2 +1,2 @@
-# Zomato
+# ZomatoFood
 ZomatoClone
