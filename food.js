@@ -1,5 +1,15 @@
 import {getnavbar,getdata} from "./compoents.js";
 
+
+window.addEventListener("load",checkStatus);
+function checkStatus(){
+
+  let checkstatus=localStorage.getItem("status");
+  console.log(checkstatus)
+ if(checkstatus==null){
+    location.href="signup.html"
+ }
+}
 // get navbar
 let navconainer = document.getElementById("nav");
 navconainer.innerHTML = getnavbar();
